@@ -1,0 +1,22 @@
+.assertEquals : junit-jupiter assertEquals
+    ANY               [org.junit.jupiter.api.Assertions]     →  org.junit.jupiter.api.Assertions.assertEquals($other$, $expr$);$END$
+
+.assertNotEquals : junit-jupiter assertNotEquals
+    ANY               [org.junit.jupiter.api.Assertions]     →  org.junit.jupiter.api.Assertions.assertNotEquals($other$, $expr$);$END$
+
+.assertTrue : junit-jupiter assertTrue
+    BOOLEAN               [org.junit.jupiter.api.Assertions]     →  org.junit.jupiter.api.Assertions.assertTrue($expr$);$END$
+
+.assertFalse : junit-jupiter assertFalse
+    BOOLEAN               [org.junit.jupiter.api.Assertions]     →  org.junit.jupiter.api.Assertions.assertFalse($expr$);$END$
+
+.assertNotNull : junit-jupiter assertNotNull
+    ANY               [org.junit.jupiter.api.Assertions]     →  org.junit.jupiter.api.Assertions.assertNotNull($expr$);$END$
+
+.assertNull : junit-jupiter assertNull
+    ANY               [org.junit.jupiter.api.Assertions]     →  org.junit.jupiter.api.Assertions.assertNull($expr$);$END$
+
+.assertThrows : junit-jupiter assertThrows
+    ANY               [org.junit.jupiter.api.Assertions]     →  org.junit.jupiter.api.Assertions.assertThrows($expr$.class, () -> {$END$});
+
+
