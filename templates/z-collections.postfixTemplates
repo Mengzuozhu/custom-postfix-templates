@@ -13,6 +13,11 @@
     java.util.Collection     →  $expr$.stream().noneMatch($conditionF$)
     java.lang.Iterable       →  java.util.stream.StreamSupport.stream($expr$.spliterator(), false).noneMatch($conditionF$)
 
+.findAny : find any in stream
+    ARRAY                    →  java.util.Arrays.stream($expr$).filter($conditionF$).findAny()
+    java.util.Collection     →  $expr$.stream().filter($conditionF$).findAny()
+    java.lang.Iterable       →  java.util.stream.StreamSupport.stream($expr$.spliterator(), false).filter($conditionF$).findAny()
+
 .limit : limit in stream
     ARRAY                    →  java.util.Arrays.stream($expr$).limit($intValue$)
     java.util.Collection     →  $expr$.stream().limit($intValue$)
