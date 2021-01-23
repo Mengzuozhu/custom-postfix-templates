@@ -9,5 +9,6 @@ class DemoClassTest {
 
     @Test
     void test() {
+        String s = "";
     }
 }

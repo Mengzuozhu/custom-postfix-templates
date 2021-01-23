@@ -1,0 +1,24 @@
+.anyMatch : any match in stream
+    ARRAY                    →  java.util.Arrays.stream($expr$).anyMatch($conditionF$)
+    java.util.Collection     →  $expr$.stream().anyMatch($conditionF$)
+    java.lang.Iterable       →  java.util.stream.StreamSupport.stream($expr$.spliterator(), false).anyMatch($conditionF$)
+
+.allMatch : all match in stream
+    ARRAY                    →  java.util.Arrays.stream($expr$).allMatch($conditionF$)
+    java.util.Collection     →  $expr$.stream().allMatch($conditionF$)
+    java.lang.Iterable       →  java.util.stream.StreamSupport.stream($expr$.spliterator(), false).allMatch($conditionF$)
+
+.noneMatch : none match in stream
+    ARRAY                    →  java.util.Arrays.stream($expr$).noneMatch($conditionF$)
+    java.util.Collection     →  $expr$.stream().noneMatch($conditionF$)
+    java.lang.Iterable       →  java.util.stream.StreamSupport.stream($expr$.spliterator(), false).noneMatch($conditionF$)
+
+.limit : limit in stream
+    ARRAY                    →  java.util.Arrays.stream($expr$).limit($intValue$)
+    java.util.Collection     →  $expr$.stream().limit($intValue$)
+    java.lang.Iterable       →  java.util.stream.StreamSupport.stream($expr$.spliterator(), false).limit($intValue$)
+
+.skip : skip in stream
+    ARRAY                    →  java.util.Arrays.stream($expr$).skip($intValue$)
+    java.util.Collection     →  $expr$.stream().skip($intValue$)
+    java.lang.Iterable       →  java.util.stream.StreamSupport.stream($expr$.spliterator(), false).skip($intValue$)
