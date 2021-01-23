@@ -1,0 +1,29 @@
+.matchQuery : elasticsearch matchQuery
+    java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.matchQuery($expr$, $text$));
+
+.matchPhraseQuery : elasticsearch matchPhraseQuery
+    java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.matchPhraseQuery($expr$, $text$));
+
+.queryStringQuery : elasticsearch queryStringQuery
+    java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.queryStringQuery($expr$, $other$));
+
+.termsQuery : elasticsearch termsQuery
+    java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.termsQuery($expr$, $values$));
+
+.termQuery : elasticsearch termQuery
+    java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.termQuery($expr$, $value$));
+
+.rangeQuery : elasticsearch rangeQuery
+    java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.rangeQuery($expr$)\
+                                                                                                         .gte($gte$)\
+                                                                                                         .lte($lte$));
+
+.search : RestHighLevelClient search in default
+    org.elasticsearch.client.RestHighLevelClient    →   $expr$.search($request$, RequestOptions.DEFAULT);
+
