@@ -1,24 +1,24 @@
-.minAggES : elasticsearch min agg
+.minAggregateES : elasticsearch min aggregate
     java.lang.String   [org.elasticsearch.search.aggregations.AggregationBuilders]   →   AggregationBuilders.min($expr$)\
                                                                                            .field($expr$);
 
-.maxAggES : elasticsearch max agg
+.maxAggregateES : elasticsearch max aggregate
     java.lang.String   [org.elasticsearch.search.aggregations.AggregationBuilders]   →   AggregationBuilders.max($expr$)\
                                                                                            .field($expr$);
 
-.avgAggES : elasticsearch avg agg
+.avgAggregateES : elasticsearch avg aggregate
     java.lang.String   [org.elasticsearch.search.aggregations.AggregationBuilders]   →   AggregationBuilders.avg($expr$)\
                                                                                            .field($expr$);
 
-.termsAggES : elasticsearch terms agg
+.termsAggregateES : elasticsearch terms aggregate
     java.lang.String   [org.elasticsearch.search.aggregations.AggregationBuilders]   →   AggregationBuilders.terms($expr$)\
                                                                                            .field($expr$);
 
-.cardinalityAggES : elasticsearch cardinality agg
+.cardinalityAggregateES : elasticsearch cardinality aggregate
     java.lang.String   [org.elasticsearch.search.aggregations.AggregationBuilders]   →   AggregationBuilders.cardinality($expr$)\
                                                                                            .field($expr$);
 
-.distinctAggES : elasticsearch cardinality agg
+.distinctAggregateES : elasticsearch cardinality aggregate
     java.lang.String   [org.elasticsearch.search.aggregations.AggregationBuilders]   →   AggregationBuilders.cardinality($expr$)\
                                                                                            .field($expr$);
 
