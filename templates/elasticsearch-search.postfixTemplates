@@ -1,3 +1,11 @@
+.idsQuery : elasticsearch idsQuery
+    java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.idsQuery().addIds($expr$));
+    ARRAY              [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.idsQuery().addIds($expr$));
+    java.util.Collection  [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.idsQuery().addIds($expr$.toArray(new String[0])));
+
 .matchQuery : elasticsearch matchQuery
     java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
                                                                                      .query(QueryBuilders.matchQuery($expr$, $text$));
@@ -9,6 +17,10 @@
 .queryStringQuery : elasticsearch queryStringQuery
     java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
                                                                                      .query(QueryBuilders.queryStringQuery($expr$, $other$));
+
+.simpleQueryStringQuery : elasticsearch simpleQueryStringQuery
+    java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\
+                                                                                     .query(QueryBuilders.simpleQueryStringQuery($expr$, $other$));
 
 .termsQuery : elasticsearch termsQuery
     java.lang.String   [org.elasticsearch.search.builder.SearchSourceBuilder]   →   new SearchSourceBuilder()\

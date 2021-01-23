@@ -12,6 +12,6 @@ public class DemoClass {
         String str = "1";
         List<String> list = Stream.of(str).collect(Collectors.toList());
         String[] array = {str};
-
+        list.toArray(new String[0]);
     }
 }
